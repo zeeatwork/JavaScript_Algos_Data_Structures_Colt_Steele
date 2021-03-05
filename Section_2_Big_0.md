@@ -100,10 +100,86 @@ function countUpAndDown(n) {
   console.log("Going Up!");
   for (let i = 0; i < n; i++) {
     console.log(i);
-  }
+  }//O(n) as n grows, this loop grows
    console.log("At the top! \nGoing down...");
   for (let j = 0; j < n; j++) {
     console.log(j);
-  }
+  }//O(n) as n grows, this loop grows
   console.log("Back down. Bye");
 }
+// Big O (n)
+
+
+
+//NESTED LOOP
+function printAllPairs(n) {
+  for (var i = 0; i < n; i++) {
+    for (var j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+}//O(n)for each loop
+//O(n * n)  exponential n-squared
+```
+
+## Simplifying Big O Expressions
+
+1. Checking for proportions
+2. Constants don't matter (arithmetic constants, variable assignments, accessing elements by index or key)
+3. Smaller terms don't matter
+4. In a loop, the complexity of the code block executed matters
+
+```javascript
+function logAtLeast5(n) {
+  for (let i = 1; i <= Math.max(5, n); i++) {
+    console.log(i);
+  }
+} //O(n) Linear 
+
+
+
+function logAtMost5(n) {
+  for (let i = 1; i <= Math.min(5, n); i++) {
+    console.log(i);
+  }
+} //Constant O(1)
+```
+
+## Space Complexity
+  *** Time complexity analyzed the runtime as the size of the inputs increased.
+  * Space complexity analyzed the additional memory we need to allocate in order to runt he algorithm's code ***
+
+  1. we are ignoring inputs (auxiliary space complexity) for this portion
+  2. Focusing on what happens inside the algo
+  3. most primitive values are constant space
+  4. Strings and reference types are O(n) space where n is the length
+
+  ## Examples
+```javascript
+function sum(arr) {
+  let total = 0;//total takes up space
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i]; //i takes up space
+  }
+  return total;
+} //O(1) space
+
+function double(arr) {
+  let newArr = [];//takes up variable expanding space changes length
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]); //length increases each iteration
+  }
+  return newArr;
+} // O(n) space
+```
+### Logarithm
+*Logarithm: the inverse of exponentiation.*
+
+log2(8) = 3 ======> 2 cubed = 8
+ *The **binary logarithm** of a number roughly measures the number of times you can divide that number by 2 before you get a value less than or equal to one.*
+
+ O(log n) compares favorably to any that are above O(1)
+
+ 1. Certain searching algorithms have logarithmic time complexity
+ 2. Efficient sorting algos involve logarithms.
+ 3. Recursion involves logarithmic space complexity
