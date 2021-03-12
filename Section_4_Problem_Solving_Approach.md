@@ -49,5 +49,17 @@
 - Make shell functions and psuedocode or comment steps
 
 #### Step 4: Solve or Simplify
-
+  * Solve what you can
+  * Solve a simpler problem
+    * Focus on the part of the problem you know how to solve
+    * Incorporate the part you figure out how to solve 
+    * Maybe figure out how to do the thing in one value, then you can loop or use a high order function
+  * Communicate with the reviewer  
 #### Step 5: Look Back and Refactor
+  * Can you check the result
+  * Can the result be achieved differently
+  * Is it readable?
+  * Is the method reusable?
+  * Can performance be improved
+  * How have others solved it?
+  * Create helper functions(readible, reusable, performant)?
